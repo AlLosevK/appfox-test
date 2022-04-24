@@ -14,7 +14,27 @@
     padding-top: 5em
     padding-bottom: 0
   @include media-laptop
-    padding: 8em 0
+    padding: 10em 0 5em
+  &__bg
+    position: absolute
+    top: 135%
+    left: 50%
+    transform: translate(-50%, -100%)
+    width: 300%
+    height: 300%
+    border-radius: 50%
+    z-index: 0
+    background: radial-gradient(95.07% 139.28% at 50% -43.54%, #FFAB00 0%, #FFCD68 29.64%, #FFAB00 85.3%, #FFAB00 100%)
+    &-2
+      position: absolute
+      top: 15%
+      left: 50%
+      transform: translate(-50%, -100%)
+      width: 300%
+      height: 300%
+      border-radius: 50%
+      z-index: 0
+      background-color: #fff
   & .container
     display: -webkit-flex
     display: -ms-flex
@@ -23,7 +43,7 @@
     justify-content: space-between
     align-items: center
     position: relative
-    z-index: 1
+    z-index: 4
     @include media-tablet
       transform: rotate(-180deg)
     @include media-laptop

@@ -8,6 +8,8 @@
   position: relative
   @include media-tablet
     padding-bottom: 5em
+  @include media-laptop
+    padding: 5em 0 13em
   & .container
     display: -webkit-flex
     display: -ms-flex
@@ -16,6 +18,8 @@
     flex-wrap: wrap
     justify-content: space-between
     align-items: center
+    position: relative
+    z-index: 4
   &__content
     width: 100%
     @include media-laptop

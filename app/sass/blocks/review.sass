@@ -4,22 +4,56 @@
   display: flex
   flex-direction: column
   align-items: center
-  padding: 2.3em 0
-  background: url("../images/dest/bg-review.png") no-repeat, radial-gradient(95.07% 139.28% at 50% -43.54%, #513E63 0%, #282837 29.64%, #4D4793 85.3%, #9260A9 100%)
-  background-size: 100%
-  border-top-left-radius: 150% 30%
-  border-top-right-radius: 150% 30%
   position: relative
   z-index: 1
+  overflow: hidden
   @include media-tablet
     padding-bottom: 6em
+  &__bg
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translate(-50%, 0)
+    width: 300%
+    height: 300%
+    border-radius: 50%
+    z-index: 0
+    background: url("../images/dest/bg-review.png") no-repeat, radial-gradient(95.07% 139.28% at 50% -43.54%, #9260A9 0%, #4D4793 14.7%, #282837 70.36%, #513E63 100%)
+    background-position: 100% 100%
+    background-size: cover
+    &-2
+      position: absolute
+      top: 90%
+      left: 50%
+      transform: translate(-50%, 0)
+      width: 300%
+      height: 300%
+      border-radius: 50%
+      z-index: 0
+      background-color: #fff
   & .container
+    position: relative
+    z-index: 4
+    @include media-laptop
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      position: relative
+      z-index: 1
+  &__content
+    @include media-laptop
+      width: 40%
   &__title
     text-transform: uppercase
     font-size: 16px
     font-weight: bold
     color: #fff
     margin-bottom: 1.1em
+    @include media-laptop
+      font-size: 32px
     & span
       font-size: 30px
   &__descr
@@ -43,9 +77,17 @@
       font-style: italic
       color: #fff
       margin-bottom: .56em
+      @include media-laptop
+        font-size: 16px
     &-cite
       font-weight: bold
       font-size: 14px
       line-height: 150%
       font-style: normal
       color: #fff
+
+  & .wrap
+    display: none
+    width: 43%
+    @include media-laptop
+      display: block

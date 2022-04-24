@@ -9,6 +9,8 @@
   padding: 1em 0
   width: 100%
   background-color: #FFAB00
+  position: relative
+  z-index: 1
   & .container
     display: -webkit-flex
     display: -ms-flex
@@ -25,6 +27,7 @@
     flex-direction: row
     justify-content: space-between
     align-items: center
+    width: 75%
     @include media-tablet
       width: 64%
     @include media-laptop
@@ -102,6 +105,7 @@
       font-size: 24px
     &-circle
       font-size: 1.5em
+      width: 25%
       @include media-tablet
         font-size: 3em
       @include media-laptop
