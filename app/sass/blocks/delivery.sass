@@ -1,0 +1,76 @@
+.delivery
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: row
+  justify-content: center
+  background: linear-gradient(180deg, #FFAB00 -182.82%, #FFCD68 -100.25%, #FFAB00 54.78%, #FFAB00 95.73%)
+  padding: 1.2em 0 2.2em
+  position: relative
+  z-index: 1
+  @include media-tablet
+    background: radial-gradient(95.07% 139.28% at 50% -43.54%, #FFAB00 0%, #FFCD68 29.64%, #FFAB00 85.3%, #FFAB00 100%)
+    transform: rotate(180deg)
+    padding-top: 5em
+    padding-bottom: 0
+  @include media-laptop
+    padding: 8em 0
+  & .container
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    position: relative
+    z-index: 1
+    @include media-tablet
+      transform: rotate(-180deg)
+    @include media-laptop
+      justify-content: flex-end
+  &__img
+    position: absolute
+    z-index: 0
+    top: 14%
+    right: 0%
+    transform: translate(0, -100%)
+    @include media-tablet
+      display: none
+    &-tablet
+      display: none
+      @include media-tablet
+        display: block
+      @include media-laptop
+        display: none
+    &-desk
+      display: none
+      @include media-laptop
+        display: block
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translate(0, -50%)
+  &__content
+    width: 100%
+    @include media-tablet
+      width: 60%
+    @include media-laptop
+      width: 48%
+  &__title
+    color: #fff
+    font-size: 13px
+    line-height: 120%
+    text-transform: uppercase
+    width: 50%
+    padding-bottom: 1em
+    @include media-tablet
+      width: 100%
+      font-size: 16px
+    @include media-laptop
+      font-size: 32px
+  &__descr
+    color: #fff
+    font-size: 13px
+    line-height: 150%
+    @include media-tablet
+      font-size: 14px

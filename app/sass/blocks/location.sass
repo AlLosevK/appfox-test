@@ -1,0 +1,56 @@
+.location
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: row
+  justify-content: center
+  padding: 2em -0px 1em
+  position: relative
+  @include media-tablet
+    padding-bottom: 5em
+  & .container
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+  &__content
+    width: 100%
+    @include media-laptop
+      width: 45%
+  &__title
+    text-transform: uppercase
+    font-size: 13px
+    line-height: 120%
+    font-weight: 700
+    margin-bottom: 1em
+    & span
+      color: #FF9C01
+    @include media-tablet
+      display: none
+      font-size: 32px
+    @include media-laptop
+      display: block
+    &-table
+      display: none
+      font-size: 16px
+      @include media-tablet
+        display: block
+      @include media-laptop
+        display: none
+
+  &__descr
+    font-size: 13px
+    line-height: 150%
+    color: #4E5C66
+    margin-bottom: 1em
+    @include media-tablet
+      font-size: 14px
+  & .map
+    width: 60%
+    @include media-tablet
+      width: 100%
+    @include media-laptop
+      width: 50%

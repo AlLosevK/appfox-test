@@ -1,0 +1,51 @@
+.review
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 2.3em 0
+  background: url("../images/dest/bg-review.png") no-repeat, radial-gradient(95.07% 139.28% at 50% -43.54%, #513E63 0%, #282837 29.64%, #4D4793 85.3%, #9260A9 100%)
+  background-size: 100%
+  border-top-left-radius: 150% 30%
+  border-top-right-radius: 150% 30%
+  position: relative
+  z-index: 1
+  @include media-tablet
+    padding-bottom: 6em
+  & .container
+  &__title
+    text-transform: uppercase
+    font-size: 16px
+    font-weight: bold
+    color: #fff
+    margin-bottom: 1.1em
+    & span
+      font-size: 30px
+  &__descr
+    font-size: 14px
+    line-height: 150%
+    color: #fff
+    margin-bottom: .71em
+  &__img
+    color: #fff
+    margin-bottom: .56em
+  &__item
+    margin: 0
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    &-descr
+      font-size: 14px
+      line-height: 150%
+      font-style: italic
+      color: #fff
+      margin-bottom: .56em
+    &-cite
+      font-weight: bold
+      font-size: 14px
+      line-height: 150%
+      font-style: normal
+      color: #fff

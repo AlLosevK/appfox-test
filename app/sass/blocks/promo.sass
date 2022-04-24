@@ -1,0 +1,111 @@
+.promo
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: row
+  justify-content: center
+  background: radial-gradient(95.07% 139.28% at 50% -43.54%, #513E63 0%, #282837 29.64%, #4D4793 85.3%, #9260A9 100%)
+  padding: 13em -0px 1em
+  border-bottom-left-radius: 150% 30%
+  border-bottom-right-radius: 150% 30%
+  @include media-tablet
+    padding: 1em 0 0
+  @include media-laptop
+    padding: 5em 0 3em
+  &__banner
+    position: absolute
+    top: -14%
+    left: 50%
+    transform: translate(-50%, -100%)
+    z-index: 2
+    @include media-tablet
+      display: none
+    &-tablet
+      display: none
+      z-index: 1
+      @include media-tablet
+        display: block
+      @include media-laptop
+        display: none
+    &-desk
+      display: none
+      @include media-laptop
+        display: block
+        margin-top: -10em
+  & .container
+    position: relative
+    @include media-tablet
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-direction: row-reverse
+      justify-content: space-between
+      align-items: center
+  &__content
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    @include media-tablet
+      width: 64%
+    @include media-laptop
+      width: 48%
+  &__title
+    color: #fff
+    font-size: 13px
+    line-height: 120%
+    text-transform: uppercase
+    font-weight: 700
+    margin-bottom: 1em
+    @include media-tablet
+      display: none
+    @include media-laptop
+      display: block
+      font-size: 32px
+    & span
+      color: $mainColor
+    @include media-laptop
+      display: none
+    &-tablet
+      display: none
+      font-size: 16px
+      @include media-tablet
+        display: block
+      @include media-laptop
+        display: none
+    &-desk
+      display: none
+      @include media-laptop
+        display: block
+  &__descr
+    font-size: 13px
+    line-height: 150%
+    color: #fff
+    margin-bottom: 1em
+    @include media-tablet
+      font-size: 14px
+  &__fact
+    font-size: 13px
+    line-height: 15px
+    color: #fff
+    width: 22%
+    @include media-tablet
+      font-size: 14px
+      line-height: 16px
+    @include media-laptop
+      font-size: 18px
+      line-height: 21px
+      width: 30%
+    & span
+      font-weight: 600
+      font-size: 13px
+      line-height: 15px
+      @include media-tablet
+        font-size: 16px
+        line-height: 19px
+      @include media-laptop
+        font-size: 37px
+        line-height: 43px

@@ -1,0 +1,114 @@
+@import utils/variables
+
+.footer
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 1em 0
+  width: 100%
+  background-color: #FFAB00
+  & .container
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    @include media-tablet
+      width: 70%
+  &__nav
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    @include media-tablet
+      width: 64%
+    @include media-laptop
+      justify-content: flex-end
+  &__link
+    @include media-laptop
+      text-decoration: none
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      margin-left: 1.8em
+      color: #fff
+      &:first-child
+        margin-left: 0
+    &-img
+      color: #fff
+      width: 1em
+      height: 1em
+    & span
+      display: none
+      @include media-laptop
+        display: inline
+    &-prtn
+      @include media-tablet
+        background-color: #fff
+        padding: 8px 25px
+        border-radius: 100px
+        text-decoration: none
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+      & .icon
+        @include media-tablet
+          display: none
+      & span
+        @include media-tablet
+          display: inline
+          font-size: 18px
+          line-height: 170%
+          color: #FFAB00
+          margin-left: .6em
+      @include media-laptop
+        display: none
+    &-auth
+      @include media-laptop
+        background-color: #fff
+        padding: 8px 25px
+        border-radius: 100px
+        text-decoration: none
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        margin-left: 6em
+      & .icon
+        @include media-laptop
+          display: none
+      & span
+        @include media-laptop
+          display: inline
+          font-size: 18px
+          line-height: 170%
+          color: #FFAB00
+  & .icon
+    font-size: 18px
+    @include media-tablet
+      font-size: 24px
+    &-circle
+      font-size: 1.5em
+      @include media-tablet
+        font-size: 3em
+      @include media-laptop
+        display: none
+    &-footer
+      display: none
+      @include media-laptop
+        display: block
+        width: auto
+        height: auto

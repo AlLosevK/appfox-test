@@ -1,0 +1,30 @@
+.wrap
+  width: auto
+  font-size: 22px
+  padding: 5em
+.phone
+  position: relative
+  &:hover
+    & .phone__img
+      animation: wiggle 2s linear infinite
+  &__img
+    position: absolute
+    z-index: 1
+    &-1
+      left: calc(97/276)*100%
+      top: calc(106/364)*100%
+      width: calc(200/276)*100%
+      height: calc(199/364)*100%
+      transform: translate(-100%, -100%)
+    &-2
+      right: calc(43/276)*100%
+      top: calc(35/364)*100%
+      width: calc(149/276)*100%
+      height: calc(196/364)*100%
+      transform: translate(100%, 0)
+    &-3
+      left: calc(119/276)*100%
+      bottom: calc(74/364)*100%
+      width: calc(207/276)*100%
+      height: calc(155/364)*100%
+      transform: translate(-100%, 100%)

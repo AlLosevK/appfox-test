@@ -1,0 +1,55 @@
+.banner
+  position: relative
+  background-color: $mainColor
+  padding-bottom: 3em
+  position: relative
+  z-index: 1
+  @include media-tablet
+    padding-bottom: 1em
+  &__content
+    overflow: hidden
+    height: 80vw
+    padding-top: 20em
+    padding-bottom: 5em
+    background: url("../images/dest/banner.png") no-repeat
+    background-position: 50% 20%
+    background-size: 100%
+    box-shadow: 0 -79px 53px -23px rgba(255, 171, 0, 1) inset
+    position: relative
+    z-index: 1
+    @include media-tablet
+      height: auto
+      padding-top: 18em
+      background-size: 35%
+      background-position: 45% -100%
+  &__img
+    margin: 0
+    padding: 0
+
+
+.socials
+  position: absolute
+  top: 50%
+  right: 1.5em
+  transform: translate(0, -50%)
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  z-index: 1
+  @include media-tablet
+    right: 2em
+  &__link
+    color: #fff
+    margin-bottom: 1.15em
+    &:last-child
+      margin-bottom: 0
+    &-img
+      &.icon-fb
+        font-size: 21px
+      &.icon-vk
+        font-size: 12px
+      &.icon-inst
+        font-size: 22px

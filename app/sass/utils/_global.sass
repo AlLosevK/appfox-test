@@ -1,0 +1,30 @@
+@import ../../node_modules/normalize.css/normalize
+
+*,
+*::before,
+*::after
+    box-sizing: inherit
+    line-height: 1.2em
+
+html
+    box-sizing: border-box
+
+
+body
+    margin: 0
+    font-family: 'Roboto', sans-serif
+    max-width: 100%
+    overflow-x: hidden
+
+img
+    max-width: 100%
+
+@for $i from 1 to 6
+  h#{$i}
+    margin: 0
+    padding: 0
+    font-family: 'Ubuntu', sans-serif
+
+p
+  margin: 0
+  padding: 0

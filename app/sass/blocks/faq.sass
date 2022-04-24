@@ -1,0 +1,63 @@
+.faq
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  padding: 2em 0
+  position: relative
+  z-index: 1
+  @include media-laptop
+    padding-top: 15em
+  & .container
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    position: relative
+    z-index: 1
+    @include media-laptop
+      width: 37.5%
+      justify-content: flex-start
+      align-items: flex-start
+  &__title
+    font-size: 16px
+    line-height: 120%
+    font-weight: 700
+    text-transform: uppercase
+    padding-bottom: 1em
+    @include media-tablet
+      font-size: 16px
+      display: none
+    @include media-laptop
+      display: block
+      font-size: 32px
+    &-tablet
+      display: none
+      @include media-tablet
+        display: block
+      @include media-laptop
+        display: none
+    & span
+      color: #ffab00
+  &__item
+    color: #4E5C66
+    margin-bottom: 1em
+    width: 100%
+    &-q
+      font-size: 13px
+      line-height: 170%
+      padding: 10px
+      box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.1)
+      border-radius: 5px
+      @include media-tablet
+        font-size: 16px
+        padding: 5px 10px
+    &-a
+      font-size: 13px
+      line-height: 175%
+      @include media-tablet
+        font-size: 14px
