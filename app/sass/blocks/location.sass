@@ -9,7 +9,7 @@
   @include media-tablet
     padding-bottom: 5em
   @include media-laptop
-    padding: 5em 0 13em
+    padding: 5em 0 0em
   & .container
     display: -webkit-flex
     display: -ms-flex
@@ -19,7 +19,7 @@
     justify-content: space-between
     align-items: center
     position: relative
-    z-index: 4
+    z-index: 6
   &__content
     width: 100%
     @include media-laptop
@@ -52,6 +52,8 @@
     margin-bottom: 1em
     @include media-tablet
       font-size: 14px
+  & .wrap
+    width: auto
   & .map
     width: 60%
     @include media-tablet

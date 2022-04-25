@@ -6,34 +6,45 @@
   align-items: center
   position: relative
   z-index: 1
-  overflow: hidden
+  background: url("../images/dest/bg-review.png") no-repeat, radial-gradient(95.07% 139.28% at 50% -43.54%, #9260A9 0%, #4D4793 14.7%, #282837 70.36%, #513E63 100%)
+  padding: 3em 0
   @include media-tablet
-    padding-bottom: 6em
+    background: transparent
+    padding: 4em 0
+    overflow: hidden
+  @include media-laptop
+    padding-top: 10em
   &__bg
-    position: absolute
-    top: 0
-    left: 50%
-    transform: translate(-50%, 0)
-    width: 300%
-    height: 300%
-    border-radius: 50%
-    z-index: 0
-    background: url("../images/dest/bg-review.png") no-repeat, radial-gradient(95.07% 139.28% at 50% -43.54%, #9260A9 0%, #4D4793 14.7%, #282837 70.36%, #513E63 100%)
-    background-position: 100% 100%
-    background-size: cover
-    &-2
+    display: none
+    @include media-tablet
+      display: block
       position: absolute
-      top: 90%
+      top: 10%
       left: 50%
       transform: translate(-50%, 0)
       width: 300%
       height: 300%
       border-radius: 50%
       z-index: 0
-      background-color: #fff
+      background: url("../images/dest/bg-review.png") no-repeat, radial-gradient(95.07% 139.28% at 50% -43.54%, #9260A9 0%, #4D4793 14.7%, #282837 70.36%, #513E63 100%)
+      background-position: 100% 100%
+      background-size: cover
+    &-2
+      display: none
+      @include media-tablet
+        display: block
+        position: absolute
+        top: 90%
+        left: 50%
+        transform: translate(-50%, 0)
+        width: 300%
+        height: 300%
+        border-radius: 50%
+        z-index: 0
+        background-color: #fff
   & .container
     position: relative
-    z-index: 4
+    z-index: 6
     @include media-laptop
       display: -webkit-flex
       display: -ms-flex
@@ -43,6 +54,7 @@
       align-items: center
       position: relative
       z-index: 1
+      padding-top: .5em
   &__content
     @include media-laptop
       width: 40%
@@ -90,4 +102,10 @@
     display: none
     width: 43%
     @include media-laptop
-      display: block
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-direction: row
+      justify-content: center
+      align-items: center
+      margin-top: -7em

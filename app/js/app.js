@@ -17,11 +17,6 @@ class Particle
        this.y = y;
        this.z = z;
 
-       //Размытие и скорость зависят от положения частицы по оси Z
-       //Чем выше частица, тем более размытой она будет и тем быстрее она будет двигаться
-       let blurs = [ 0, 2, 1, 0 ];
-
-       this.blur = blurs[z];
        this.speed = z;
        this.color = color;
    }
@@ -42,12 +37,18 @@ const particlesContainer = document.getElementById("particles");
 //Создаём массив с частицами
 const particles =
 [
-   new Particle(34, 116, 3, "url(images/dest/parralax-1.png)"),
-   new Particle(17, 450, 1, "#FF7019"),
-   new Particle(22, 500, 3, "#FF7019"),
-   new Particle(60, 700, 1, "#FF7019"),
-   new Particle(90, 600, 4, "#FF7019"),
-   new Particle(10, 900, 2, "#FF7019"),
+   new Particle(34, 62, 3, "url(images/dest/parallax/p1.png)"),
+   new Particle(69, 73, 2, "url(images/dest/parallax/p2.png)"),
+   new Particle(76, 155, 5, "url(images/dest/parallax/p3.png)"),
+   new Particle(89, 185, 4, "url(images/dest/parallax/p4.png)"),
+   new Particle(53, 301, 2, "url(images/dest/parallax/p5.png)"),
+   new Particle(9, 431, 3, "url(images/dest/parallax/p6.png)"),
+   new Particle(70, 454, 2, "url(images/dest/parallax/p7.png)"),
+   new Particle(40, 523, 2, "url(images/dest/parallax/p8.png)"),
+   new Particle(46, 116, 3, "url(images/dest/parallax/p9.png)"),
+   new Particle(21, 338, 5, "url(images/dest/parallax/p10.png)"),
+   new Particle(64, 548, 4, "url(images/dest/parallax/p11.png)"),
+   new Particle(86, 596, 2, "url(images/dest/parallax/p12.png)"),
 ];
 
 //Это функция вывода частицы на страницу
@@ -93,7 +94,7 @@ function Fill()
        let div = document.createElement("div");
        div.className = "particle";
 
-       div.setAttribute("style", "top: " + particles[i].y + "px; left: " + particles[i].x + "%; z-index: " + particles[i].z + "; filter: blur(" + particles[i].blur + "px); background: " + particles[i].color + "; ");
+       div.setAttribute("style", "top: " + particles[i].y + "px; left: " + particles[i].x + "%; z-index: " + particles[i].z + "; background: " + particles[i].color + "100% no-repeat; ");
        particlesContainer.appendChild(div);
    }
 }

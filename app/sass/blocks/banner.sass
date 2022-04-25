@@ -1,20 +1,25 @@
 .banner
-  padding-bottom: 3em
+  padding-bottom: 5em
   position: relative
   z-index: 1
   overflow: hidden
+  background-color: #ffab00
   @include media-tablet
+    background-color: transparent
     padding-bottom: 10em
   &__bg
-    position: absolute
-    top: 100%
-    left: 50%
-    transform: translate(-50%, -100%)
-    width: 300%
-    height: 300%
-    background-color: #FFAB00
-    border-radius: 50%
-    z-index: 0
+    display: none
+    @include media-tablet
+      display: block
+      position: absolute
+      top: 100%
+      left: 50%
+      transform: translate(-50%, -100%)
+      width: 300%
+      height: 300%
+      background-color: #FFAB00
+      border-radius: 50%
+      z-index: 0
   &__content
     overflow: hidden
     height: 80vw
@@ -25,7 +30,7 @@
     background-size: 100%
     box-shadow: 0 -79px 53px -23px rgba(255, 171, 0, 1) inset
     position: relative
-    z-index: 4
+    z-index: 6
     @include media-tablet
       height: auto
       padding-top: 18em
