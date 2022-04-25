@@ -4,6 +4,12 @@
   z-index: 1
   overflow: hidden
   background-color: #ffab00
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
   @include media-tablet
     background-color: transparent
     padding-bottom: 10em
@@ -20,22 +26,42 @@
       background-color: #FFAB00
       border-radius: 50%
       z-index: 0
+    @include media-laptop
+      top: 50%
+  & .container
+    box-shadow: 0 -79px 53px -23px rgba(255, 171, 0, 1) inset
   &__content
     overflow: hidden
-    height: 80vw
-    padding-top: 20em
-    padding-bottom: 5em
-    background: url("../images/dest/banner.png") no-repeat
-    background-position: 50% 20%
-    background-size: 100%
-    box-shadow: 0 -79px 53px -23px rgba(255, 171, 0, 1) inset
     position: relative
     z-index: 6
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    margin-bottom: -10em
     @include media-tablet
-      height: auto
-      padding-top: 18em
-      background-size: 35%
-      background-position: 45% -100%
+
+    @include media-laptop
+      background: transparent
+  &__anchor
+    display: none
+    width: 95px
+    height: 95px
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translate(-50%, -40%)
+    &-img
+    &-icon
+      transform: translate(-50%, -40%)
+      position: absolute
+      top: 50%
+      left: 50%
+      color: #DFEEF8
+    @include media-laptop
+      display: block
   &__img
     margin: 0
     padding: 0

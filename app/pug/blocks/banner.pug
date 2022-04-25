@@ -1,6 +1,11 @@
 section.banner
   .banner__bg
-  .banner__content
+  .container
+    .banner__content
+      img.banner__img(src="images/dest/banner-desk.png")
+      a.banner__anchor
+        img.banner__ancor-img(src="../images/dest/anchor.png")
+        +icon("anchor", "banner__anchor-icon")
   .socials
     a.socials__link(href="#")
       +icon("inst", "socials__link-img")

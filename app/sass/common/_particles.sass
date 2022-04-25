@@ -1,6 +1,9 @@
 .particles
+  display: none
   position: absolute
   left: -9999999px
+  @include media-tablet
+    display: block
 
 .particle
   position: fixed
@@ -8,7 +11,5 @@
   left: 0
   border-radius: 50%
   display: block
-  width: 180px
-  height: 180px
   filter: blur(0px)
   z-index: 1

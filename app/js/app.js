@@ -11,11 +11,14 @@ $(document).ready(function () {
 class Particle
 {
    //Конструктор принимает положение частицы по трём осям и цвет
-   constructor(x, y, z, color)
+   constructor(x, y, z, w, h, color)
    {
-       this.x = x;
+       this.x = (x+w/2)/14.40;
        this.y = y;
        this.z = z;
+
+       this.w = w;
+       this.h = h;
 
        this.speed = z;
        this.color = color;
@@ -37,18 +40,19 @@ const particlesContainer = document.getElementById("particles");
 //Создаём массив с частицами
 const particles =
 [
-   new Particle(34, 62, 3, "url(images/dest/parallax/p1.png)"),
-   new Particle(69, 73, 2, "url(images/dest/parallax/p2.png)"),
-   new Particle(76, 155, 5, "url(images/dest/parallax/p3.png)"),
-   new Particle(89, 185, 4, "url(images/dest/parallax/p4.png)"),
-   new Particle(53, 301, 2, "url(images/dest/parallax/p5.png)"),
-   new Particle(9, 431, 3, "url(images/dest/parallax/p6.png)"),
-   new Particle(70, 454, 2, "url(images/dest/parallax/p7.png)"),
-   new Particle(40, 523, 2, "url(images/dest/parallax/p8.png)"),
-   new Particle(46, 116, 3, "url(images/dest/parallax/p9.png)"),
-   new Particle(21, 338, 5, "url(images/dest/parallax/p10.png)"),
-   new Particle(64, 548, 4, "url(images/dest/parallax/p11.png)"),
-   new Particle(86, 596, 2, "url(images/dest/parallax/p12.png)"),
+   new Particle(438, 62, 3, 108, 108, "url(images/dest/parallax/p1.png)"),
+   new Particle(810, 73, 2, 137, 137, "url(images/dest/parallax/p2.png)"),
+   new Particle(69, 301, 5, 106, 106, "url(images/dest/parallax/p3.png)"),
+   new Particle(249, 185, 3, 179, 179, "url(images/dest/parallax/p4.png)"),
+   new Particle(1051, 155, 2, 152, 151, "url(images/dest/parallax/p5.png)"),
+   new Particle(92, 454, 3, 80, 78, "url(images/dest/parallax/p6.png)"),
+   new Particle(414, 431, 2, 93, 92, "url(images/dest/parallax/p7.png)"),
+   new Particle(1079, 478, 2, 71, 71, "url(images/dest/parallax/p8.png)"),
+   new Particle(1210, 338, 3, 139, 137, "url(images/dest/parallax/p9.png)"),
+   new Particle(240, 523, 5, 125, 125, "url(images/dest/parallax/p10.png)"),
+   new Particle(842, 548, 3, 178, 178, "url(images/dest/parallax/p11.png)"),
+   new Particle(1173, 596, 2, 140, 141, "url(images/dest/parallax/p12.png)"),
+   new Particle(355, 738, 1, 164, 164, "url(images/dest/parallax/p13.png)"),
 ];
 
 //Это функция вывода частицы на страницу
@@ -94,7 +98,7 @@ function Fill()
        let div = document.createElement("div");
        div.className = "particle";
 
-       div.setAttribute("style", "top: " + particles[i].y + "px; left: " + particles[i].x + "%; z-index: " + particles[i].z + "; background: " + particles[i].color + "100% no-repeat; ");
+       div.setAttribute("style", "width: " + particles[i].w + "px;height: "+ particles[i].h + "px;top: " + particles[i].y + "px; left: " + particles[i].x + "%; z-index: " + particles[i].z + "; background: " + particles[i].color + " 100% no-repeat; ");
        particlesContainer.appendChild(div);
    }
 }
