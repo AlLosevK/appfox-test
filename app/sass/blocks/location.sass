@@ -20,6 +20,10 @@
     align-items: center
     position: relative
     z-index: 6
+    @include media-tablet
+      flex-direction: column
+      justify-content: center
+      align-items: center
   &__content
     width: 100%
     @include media-laptop
@@ -54,9 +58,10 @@
       font-size: 14px
   & .wrap
     width: auto
+    @include media-laptop
+      height: 100%
   & .map
     width: 60%
     @include media-tablet
       width: 100%
     @include media-laptop
-      width: 50%

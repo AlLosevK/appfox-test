@@ -1,5 +1,5 @@
 .banner
-  padding-bottom: 5em
+  padding-bottom: 10em
   position: relative
   z-index: 1
   overflow: hidden
@@ -29,7 +29,6 @@
     @include media-laptop
       top: 50%
   & .container
-    box-shadow: 0 -79px 53px -23px rgba(255, 171, 0, 1) inset
   &__content
     overflow: hidden
     position: relative
@@ -42,7 +41,6 @@
     align-items: center
     margin-bottom: -10em
     @include media-tablet
-
     @include media-laptop
       background: transparent
   &__anchor
@@ -55,16 +53,21 @@
     transform: translate(-50%, -40%)
     &-img
     &-icon
-      transform: translate(-50%, -40%)
       position: absolute
-      top: 50%
-      left: 50%
+      top: 35%
+      left: 35%
       color: #DFEEF8
+      animation: swing 6s linear infinite
     @include media-laptop
       display: block
   &__img
     margin: 0
     padding: 0
+    margin-bottom: -50%
+    @include media-tablet
+      margin-bottom: -30%
+    @include media-laptop
+      margin-bottom: 0
 
 
 .socials
@@ -78,12 +81,15 @@
   flex-direction: column
   justify-content: space-between
   align-items: center
-  z-index: 1
+  z-index: 4
   @include media-tablet
     right: 2em
   &__link
     color: #fff
     margin-bottom: 1.15em
+    &:hover
+      & .icon
+        animation: wiggle 3s linear infinite
     &:last-child
       margin-bottom: 0
     &-img
